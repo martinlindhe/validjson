@@ -32,21 +32,11 @@ func main() {
 	if *pretty {
 		b, err := json.MarshalIndent(f, "", "    ")
 		if err != nil {
-			fmt.Println("error:", err)
+			fmt.Println("ERROR:", err)
 		}
 		fmt.Printf(string(b))
 
 	} else {
 		fmt.Println("OK:", *inFile)
 	}
-}
-
-func fileExists(name string) bool {
-
-	if _, err := os.Stat(name); err != nil {
-		if os.IsNotExist(err) {
-			return false
-		}
-	}
-	return true
 }
