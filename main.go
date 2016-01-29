@@ -40,6 +40,7 @@ func main() {
 			fmt.Println("ERROR highlight:", err)
 		}
 		fmt.Printf(string(b))
+		fmt.Println("")
 
 	} else {
 		fmt.Println("OK:", *inFile)

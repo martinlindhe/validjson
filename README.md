@@ -20,9 +20,7 @@ To pretty print the result:
 
     validjson -p file.json
 
-    {
-        "bool": true
-    }
+![screenshot](examples/pretty.png)
 
 
 # License
