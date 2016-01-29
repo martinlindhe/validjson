@@ -7,6 +7,8 @@ import (
 	"os"
 	"regexp"
 
+	"golang.org/x/crypto/ssh/terminal"
+
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 
@@ -36,8 +38,10 @@ func main() {
 			fmt.Println("ERROR:", err)
 		}
 
-		if b, err = highlight(b); err != nil {
-			fmt.Println("ERROR highlight:", err)
+		if isTerminal() {
+			if b, err = highlight(b); err != nil {
+				fmt.Println("ERROR highlight:", err)
+			}
 		}
 		fmt.Printf(string(b))
 		fmt.Println("")
@@ -45,6 +49,10 @@ func main() {
 	} else {
 		fmt.Println("OK:", *inFile)
 	}
+}
+
+func isTerminal() bool {
+	return terminal.IsTerminal(int(os.Stdin.Fd()))
 }
 
 type rule struct {
