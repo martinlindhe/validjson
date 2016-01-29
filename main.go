@@ -7,7 +7,7 @@ import (
 	"os"
 	"regexp"
 
-	"golang.org/x/crypto/ssh/terminal"
+	"github.com/mattn/go-isatty"
 
 	"gopkg.in/alecthomas/kingpin.v2"
 )
@@ -52,7 +52,7 @@ func main() {
 }
 
 func isTerminal() bool {
-	return terminal.IsTerminal(int(os.Stdin.Fd()))
+	return isatty.IsTerminal(os.Stdout.Fd())
 }
 
 type rule struct {
