@@ -7,7 +7,7 @@ This tool simply exposes the super fast [encoding/json](https://golang.org/pkg/e
 
 # Installation
 
-    go install github.com/martinlindhe/validjson
+    go get -u github.com/martinlindhe/validjson
 
 
 # Usage
