@@ -1,8 +1,7 @@
 # About
 
-Command line tool to validate JSON syntax of input files.
-
-This tool simply exposes the super fast [encoding/json](https://golang.org/pkg/encoding/json/) to the command line.
+Command line tool to validate JSON syntax of input files
+taking advantage of encoding/json in golang.
 
 
 # Installation
@@ -12,11 +11,14 @@ This tool simply exposes the super fast [encoding/json](https://golang.org/pkg/e
 
 # Usage
 
+Exit code will be 0 if file is good.
+
     validjson file.json
 
     OK: file.json
 
-To pretty print the result:
+
+# Pretty-print
 
     validjson -p file.json
 
