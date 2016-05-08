@@ -1,7 +1,7 @@
 # About
 
-Command line tool to validate JSON syntax of input files
-taking advantage of encoding/json in golang.
+Command line tool to validate and pretty-print JSON syntax of
+input files, taking advantage of encoding/json in golang.
 
 
 # Installation
