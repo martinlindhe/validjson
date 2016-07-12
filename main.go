@@ -12,8 +12,8 @@ import (
 )
 
 var (
-	inFile = kingpin.Arg("file", "JSON file").Required().ExistingFile()
-	pretty = kingpin.Flag("pretty", "Pretty print result").Short('p').Bool()
+	inFile = kingpin.Arg("file", "JSON file.").Required().ExistingFile()
+	pretty = kingpin.Flag("pretty", "Pretty print result.").Short('p').Bool()
 	quiet  = kingpin.Flag("quiet", "Don't output on success.").Short('q').Bool()
 )
 
