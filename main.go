@@ -8,13 +8,13 @@ import (
 	"regexp"
 
 	"github.com/mattn/go-isatty"
-
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 
 var (
 	inFile = kingpin.Arg("file", "JSON file").Required().ExistingFile()
 	pretty = kingpin.Flag("pretty", "Pretty print result").Short('p').Bool()
+	quiet  = kingpin.Flag("quiet", "Don't output on success.").Short('q').Bool()
 )
 
 func main() {
@@ -47,7 +47,9 @@ func main() {
 		fmt.Println("")
 
 	} else {
-		fmt.Println("OK:", *inFile)
+		if !*quiet {
+			fmt.Println("OK:", *inFile)
+		}
 	}
 }
 
