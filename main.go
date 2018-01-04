@@ -30,10 +30,15 @@ func main() {
 		os.Exit(1)
 	}
 
+	filename := "-"
+	if *inFile != "" {
+		filename = *inFile
+	}
+
 	var f interface{}
 	err = json.Unmarshal(data, &f)
 	if err != nil {
-		fmt.Println("ERROR:", *inFile, err)
+		fmt.Println("ERROR:", filename, err)
 		os.Exit(1)
 	}
 
@@ -53,7 +58,7 @@ func main() {
 
 	} else {
 		if !*quiet {
-			fmt.Println("OK:", *inFile)
+			fmt.Println("OK:", filename)
 		}
 	}
 }
