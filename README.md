@@ -1,7 +1,5 @@
 # About
 
-[![gorelease](https://dn-gorelease.qbox.me/gorelease-download-blue.svg)](https://gobuild.io/martinlindhe/validjson/master)
-
 Command line tool to validate and pretty-print JSON syntax of
 input files, taking advantage of encoding/json in golang.
 
