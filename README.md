@@ -10,7 +10,7 @@ Windows and macOS binaries are available under [Releases](https://github.com/mar
 
 Or install from source:
 
-    go get -u github.com/martinlindhe/validjson
+    go install github.com/martinlindhe/validjson@latest
 
 
 ## Usage
