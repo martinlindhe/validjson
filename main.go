@@ -7,9 +7,9 @@ import (
 	"os"
 	"regexp"
 
+	"github.com/alecthomas/kingpin/v2"
 	termutil "github.com/andrew-d/go-termutil"
 	"github.com/mattn/go-isatty"
-	"gopkg.in/alecthomas/kingpin.v2"
 )
 
 var (
